@@ -58,6 +58,13 @@ def buter(request):
     return render(request, 'calculator/index.html', context)
 
 
+
+def dish_view(request, dish):
+    for i in DATA:
+        if dish == i:
+            servings = int(request.GET.get('servings', 1))
+    return render
+
 # Напишите ваш обработчик. Используйте DATA как источник данных
 # Результат - render(request, 'calculator/index.html', context)
 # В качестве контекста должен быть передан словарь с рецептом:
