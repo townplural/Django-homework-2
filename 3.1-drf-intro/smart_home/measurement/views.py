@@ -10,11 +10,11 @@ from measurement.serializers import SensorDetailSerializer, MeasurementSerialize
 # CreateAPIView - post(create only)
 
 
-class SensorAPIView(ListCreateAPIView):  # first 2 requests
+class SensorAPIView(RetrieveUpdateAPIView):  # first 2 requests
     queryset = Sensor.objects.all()
     serializer_class = SensorDetailSerializer
 
-    def patch(self, request, *args, **kwargs):
+    def post(self, request, *args, **kwargs):
         pass
 
 
