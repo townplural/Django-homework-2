@@ -14,11 +14,9 @@ class GetPostSensor(ListCreateAPIView):  # first 2 requests
     serializer_class = SensorDetailSerializer
 
 
-
 class GetPutPatchSensor(RetrieveUpdateAPIView):
     queryset = Sensor.objects.all()
     serializer_class = SensorDetailSerializer
-
 
 
 class MeasurementAPIView(ListCreateAPIView):
