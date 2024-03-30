@@ -3,13 +3,13 @@
 @baseUrl = http://127.0.0.1:8000/api
 
 # получение датчиков
-GET {{baseUrl}}/sensors/
+GET {{baseUrl}}/get_sensors/
 Content-Type: application/json
 
 ###
 
 # создание датчика
-POST {{baseUrl}}/sensors/
+POST {{baseUrl}}/create_sensors/
 Content-Type: application/json
 
 {
@@ -20,7 +20,7 @@ Content-Type: application/json
 ###
 
 # обновление датчика
-PATCH {{baseUrl}}/sensors/1/
+PATCH {{baseUrl}}/update_sensors/1/
 Content-Type: application/json
 
 {
@@ -30,7 +30,7 @@ Content-Type: application/json
 ###
 
 # добавление измерения
-POST {{baseUrl}}/measurements/
+POST {{baseUrl}}/edit_measurements/
 Content-Type: application/json
 
 {
@@ -41,5 +41,5 @@ Content-Type: application/json
 ###
 
 # получение информации по датчику
-GET {{baseUrl}}/sensors/1/
+GET {{baseUrl}}/get_sensors/1/
 Content-Type: application/json
